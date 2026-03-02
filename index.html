@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBJITMR | Official Institutional Website</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===============================
+   GLOBAL DESIGN SYSTEM
+=================================*/
+
+:root{
+    --primary:#1a3c6e;
+    --accent:#f4b400;
+    --bg:#f8f9fb;
+    --text:#222;
+    --card:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',Times New Roman;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+section{
+    padding:100px 10%;
+}
+
+h2{
+    font-size:38px;
+    text-align:center;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.section-sub{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 60px;
+    color:#555;
+}
+
+/* ===============================
+   HEADER
+=================================*/
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#ffffff;
+    box-shadow:0 2px 20px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+header h1{
+    color:var(--primary);
+    font-weight:800;
+    font-size:20px;
+}
+
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* ===============================
+   HERO SECTION
+=================================*/
+
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero h1{
+    font-size:48px;
+    color:var(--primary);
+    animation:fadeDown 30s ease forwards;
+}
+
+.hero p{
+    max-width:700px;
+    margin-top:20px;
+    color:#555;
+    animation:fadeUp 30s ease forwards;
+}
+
+.hero-btn{
+    margin-top:30px;
+    padding:14px 35px;
+    border-radius:30px;
+    border:none;
+    background:var(--primary);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:5s;
+}
+
+.hero-btn:hover{
+    background:var(--accent);
+    transform:translateY(-5px);
+}
+
+/* Floating Background Shapes */
+
+.floating{
+    position:absolute;
+    border-radius:50%;
+    opacity:1;
+    animation:float 2s infinite ease-in-out;
+}
+
+.floating.one{
+    width:200px;
+    height:200px;
+    background:var(--primary);
+    top:10%;
+    left:5%;
+}
+
+.floating.two{
+    width:150px;
+    height:150px;
+    background:var(--accent);
+    bottom:15%;
+    right:10%;
+    animation-delay:2s;
+}
+
+/* ===============================
+   ABOUT SECTION
+=================================*/
+
+.about-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-container img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.1);
+}
+
+.about-text p{
+    margin-bottom:20px;
+    line-height:1.7;
+}
+
+/* ===============================
+   COURSES SECTION
+=================================*/
+
+.courses{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.course-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    transition:0.4s;
+}
+
+.course-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   STATS
+=================================*/
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.stat h3{
+    font-size:36px;
+    color:var(--primary);
+}
+
+/* ===============================
+   FOOTER
+=================================*/
+
+footer{
+    background:var(--primary);
+    color:white;
+    padding:40px 10%;
+    text-align:center;
+}
+
+/* ===============================
+   ANIMATIONS
+=================================*/
+
+@keyframes fadeDown{
+    from{opacity:0; transform:translateY(-40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SBJITMR</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#courses">Programs</a>
+        <a href="#stats">Achievements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="floating one"></div>
+    <div class="floating two"></div>
+
+    <h1>S.B. Jain Institute of Technology, Management & Research</h1>
+    <p>An institution committed to academic excellence, innovation, leadership and holistic student development in engineering and management education.</p>
+    <button class="hero-btn" onclick="scrollToSection()">Explore Programs</button>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About SBJITMR</h2>
+    <p class="section-sub">
+        Established with a vision to impart quality technical education, SBJITMR focuses on industry-ready curriculum, research innovation and value-based learning.
+    </p>
+
+    <div class="about-container">
+        <img src="https://picsum.photos/600/400" alt="Campus">
+        <div class="about-text">
+            <p>
+                The institute offers undergraduate and postgraduate programs in Engineering and Management. It is equipped with modern laboratories, digital classrooms, research centers and an active training & placement cell.
+            </p>
+            <p>
+                With strong academic governance and experienced faculty members, the institute promotes innovation, entrepreneurship and collaborative research.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+    <h2>Academic Programs</h2>
+    <p class="section-sub">
+        Industry-aligned curriculum designed to meet global engineering standards.
+    </p>
+
+    <div class="courses">
+        <div class="course-card">
+            <h3>B.E. Computer Science Engineering</h3>
+            <p>Advanced curriculum covering AI, Data Science, Cloud & Software Engineering.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>B.E. Mechanical Engineering</h3>
+            <p>Focus on design, manufacturing systems, thermal and industrial automation.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>B.E. Civil Engineering</h3>
+            <p>Structural engineering, environmental systems and sustainable infrastructure.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>MBA Program</h3>
+            <p>Industry-integrated management education with specialization tracks.</p>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+    <h2>Institutional Achievements</h2>
+
+    <div class="stats">
+        <div class="stat">
+            <h3 class="counter" data-target="5000">0</h3>
+            <p>Students Enrolled</p>
+        </div>
+        <div class="stat">
+            <h3 class="counter" data-target="300">0</h3>
+            <p>Faculty Members</p>
+        </div>
+        <div class="stat">
+            <h3 class="counter" data-target="100">0</h3>
+            <p>Recruiting Companies</p>
+        </div>
+        <div class="stat">
+            <h3 class="counter" data-target="95">0</h3>
+            <p>% Placement Rate</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <p>© 2026 S.B. Jain Institute of Technology, Management & Research | Nagpur, India</p>
+</footer>
+
+<script>
+
+/* SCROLL BUTTON */
+function scrollToSection(){
+    document.getElementById("about").scrollIntoView({behavior:"smooth"});
+}
+
+/* COUNTER ANIMATION */
+const counters=document.querySelectorAll('.counter');
+counters.forEach(counter=>{
+    const update=()=>{
+        const target=+counter.getAttribute('data-target');
+        const count=+counter.innerText;
+        const inc=target/200;
+        if(count<target){
+            counter.innerText=Math.ceil(count+inc);
+            setTimeout(update,15);
+        }else{
+            counter.innerText=target;
+        }
+    }
+    update();
+});
+
+</script>
+
+</body>
+</html>
