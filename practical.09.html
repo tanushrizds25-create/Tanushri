@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Responsive Page</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background: #f9f9f9;
+        }
+
+        header {
+            background: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #333;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 12px 15px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #4a90e2;
+        }
+
+        .content {
+            column-count: 2;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 30px;
+            color: #4a90e2;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Responsive Webpage</h1>
+    <p>Using CSS3 Features</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="content">
+    <p>
+        This is a simple responsive webpage created using CSS3 features.
+        It uses columns for text layout and adapts to different screen sizes.
+    </p>
+    <p>
+        The design is clean and minimal, making it easy to read and visually appealing.
+        CSS3 allows us to create modern designs without much complexity.
+    </p>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <i class="fas fa-laptop icon"></i>
+        <h3>Design</h3>
+        <p>Simple and clean layout.</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-mobile-alt icon"></i>
+        <h3>Responsive</h3>
+        <p>Works on all devices.</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-star icon"></i>
+        <h3>Attractive</h3>
+        <p>Modern CSS3 features.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Simple Webpage</p>
+</footer>
+
+</body>
+</html>
