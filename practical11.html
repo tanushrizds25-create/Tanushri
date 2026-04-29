@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- Drag & Drop -->
+<h3>Drag & Drop</h3>
+<div id="d" draggable="true" style="background:lightblue;width:80px;">Drag</div>
+<div id="b" style="width:150px;height:100px;border:1px solid;"></div>
+
+<!-- Geolocation -->
+<h3>Geolocation</h3>
+<button onclick="g()">Location</button>
+<p id="l"></p>
+
+<!-- Web Storage -->
+<h3>Web Storage</h3>
+<button onclick="s()">Save</button>
+<button onclick="r()">Get</button>
+<p id="o"></p>
+
+<script>
+// Drag & Drop
+d.ondragstart=e=>e.dataTransfer.setData("id",e.target.id);
+b.ondragover=e=>e.preventDefault();
+b.ondrop=e=>{
+  e.preventDefault();
+  b.appendChild(document.getElementById(e.dataTransfer.getData("id")));
+};
+
+// Geolocation
+function g(){
+  navigator.geolocation.getCurrentPosition(
+    p=>l.innerHTML=p.coords.latitude+","+p.coords.longitude,
+    ()=>l.innerHTML="Denied"
+  );
+}
+
+// Storage
+function s(){localStorage.setItem("user","Abhijeet");}
+function r(){o.innerHTML=localStorage.getItem("user");}
+</script>
+
+</body>
+</html>
